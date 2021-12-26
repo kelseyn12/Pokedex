@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const pokemon = require('./models/pokemon.js');
+const res = require("express/lib/response");
+const methodOverride = require('method-override');
 const port = 3000;
 /*==============================
         Mount Middleware
@@ -9,6 +11,8 @@ app.use(express.urlencoded({extended: false}));
 
 
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
+
 /*============================
         ROUTES
 ==============================*/
@@ -21,17 +25,28 @@ app.get('/pokemon/', (req, res) => {
 });
 
 //NEW
-
+app.get("/pokemon/new", (req, res) => {
+    res.render("new.ejs")
+});
 //DELETE
-
+app.delete('/pokemon/:id',(req,res) => {
+    pokemon.splice(req.params.id, 1);
+    res.redirect('/pokemon');
+});
 //UPDATE
-
+app.put('/pokemon/:id', (req,res) => {
+   pokemon[req.params.id] = req.body;
+   res.redirect('/pokemon');
+});
 //CREATE
-
+app.post("/pokemon", (req,res) => {
+   pokemon.push(req.body);
+   res.redirect('/pokemon') 
+});
 //EDIT
 app.get('/pokemon/:id/edit', (req, res) => {
     res.render('edit.ejs', {
-     pokemon: data[req.params.id],
+     pokemon: pokemon[req.params.id],
      index: req.params.id,   
     })
 });
