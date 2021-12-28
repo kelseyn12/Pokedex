@@ -1,0 +1,39 @@
+body {
+    margin:0;
+    background-color: lightcyan;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    background-color: lightcoral;
+}
+nav, nav > ol {
+    display: flex;
+    align-items: center;
+}
+header > nav > ol {
+    list-style: none;
+}
+
+header li {
+    margin-right: 1.7rem;
+}
+
+header a {
+    text-decoration: none;
+    color:inherit;
+}
+#index {
+    display: flex;
+    justify-content: center;
+}
+ul {
+    list-style-type: none;
+}
+.heading {
+    margin-left: 1.7rem;
+}

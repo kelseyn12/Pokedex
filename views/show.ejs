@@ -4,9 +4,17 @@
 <body>
     <%- include("./partials/header.ejs") %>
     <h1><% title %></h1>
-    <h2><%= pokemon.name %></h2>
-    <h2><%= pokemon.type %></h2>
+    <div class="heading">
+    <h2>Name:</h2>
+    <h3><%= pokemon.name %></h3>
+    <h2>Type:</h2>
+    <h3><%= pokemon.type %></h3>
     <img src="<%= pokemon.img %>" alt="">
+    </div>
+    <%# Object.keys(data[i].key).forEach(key => { %>
+       <%# pokemon.stats %>
+<%# }) %> 
+  
        
     
 </body>

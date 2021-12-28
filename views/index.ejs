@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <span id= "index">
+    <h1>Index</h1>
+</span>
+    <% data.forEach(function(pokemon, i) { %>
+       <ul>
+        <li>
+            <a href="/pokemon/<%= i %>">
+        <img src="<%= pokemon.img %>" alt="">    
+            </a>
+            <h3><%= pokemon.name %></h3>
+            <form action="/pokemon/<%= i %>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE">
+            </form>
+            <a href="/pokemon/<%=i %>/edit">EDIT</a>
+        </li>
+        </ul>
+  <% }) %>
+    
+</body>
+</html>
