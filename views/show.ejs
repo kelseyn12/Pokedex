@@ -11,9 +11,10 @@
     <h3><%= pokemon.type %></h3>
     <img src="<%= pokemon.img %>" alt="">
     </div>
-    <%# Object.keys(data[i].key).forEach(key => { %>
-       <%# pokemon.stats %>
-<%# }) %> 
+    <% Object.keys(pokemon.stats).forEach(key => { %>
+      <h2> <%= key %>:</h2>
+       <%= pokemon.stats[key] %>
+<% }) %> 
   
        
     
