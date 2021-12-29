@@ -5,10 +5,11 @@
     <%- include("./partials/header.ejs") %>
     <h1>New Pokemon Page</h1>
 
-    <form action="/pokemon" method="POST">
+    <form action="/upload" method="POST" enctype="multipart/form-data">
         Name: <input type="text" name="name" /><br />
         Type: <input type="text" name="type" /><br />
-        Image: <input type="file" id="image_input" accepts="image/png, image/jpg" name="image" /><br />
+        Stats: <input type="text" name="stats" /><br />
+        Image: <input type="file" id="image_input" name="image" /><br />
         <div id="display_image"></div>
         <input type="submit" value="Add Pokemon" />
     </form>

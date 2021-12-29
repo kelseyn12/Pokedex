@@ -8,6 +8,8 @@
 <form action="/pokemon/<%=index %>?_method=PUT" method="POST">
 Name: <input type="text" name="name" value="<%=pokemon.name %>" /><br />
 Type: <input type="text" name="type" value="<%=pokemon.type %>" /><br />
+Image: <input type="file" id="image_input" name="image" /><br />
+        <div id="display_image"></div>
 <input type="submit" value="Update Pokemon" />
 
 </form>

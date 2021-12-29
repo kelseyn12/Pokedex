@@ -1,5 +1,19 @@
 const express = require('express');
 const app = express();
+const path = require('path')
+const multer = require('multer')
+const storage = multer.diskStorage({
+    // destination: (req, file, cb) => {
+    //     cb(null, '../images')
+    // },
+
+    // filename:(req, file, cb) => {
+    //     console.log(file)
+    //     cb(null, Date.now() + path.extname(file.originalname))
+    // }
+})
+
+const upload = multer({dest: "./Public/images/"})
 const pokemon = require('./models/pokemon.js');
 const res = require("express/lib/response");
 const methodOverride = require('method-override');
@@ -28,6 +42,9 @@ app.get('/pokemon/', (req, res) => {
 app.get("/pokemon/new", (req, res) => {
     res.render("new.ejs")
 });
+app.get("/upload", (req, res) => {
+    res.render("upload");
+});
 //DELETE
 app.delete('/pokemon/:id',(req,res) => {
     pokemon.splice(req.params.id, 1);
@@ -41,7 +58,14 @@ app.put('/pokemon/:id', (req,res) => {
 //CREATE
 app.post("/pokemon", (req,res) => {
    pokemon.push(req.body);
-   res.redirect('/pokemon') 
+   res.redirect('/pokemon'); 
+});
+
+app.post("/upload", upload.single("image"), (req,res) => {
+    req.body.img = "/images/" + req.file.filename
+    pokemon.push(req.body);
+    console.log(req.file, req.body)
+    res.redirect('/pokemon');
 });
 //EDIT
 app.get('/pokemon/:id/edit', (req, res) => {
