@@ -3,14 +3,19 @@
     <%- include('./partials/head.ejs') %>
 <body>
     <%- include("./partials/header.ejs") %>
+    <div class = "new">
     <h1>New Pokemon Page</h1>
-
+    </div>
+<div class ="newform">
     <form action="/upload" method="POST" enctype="multipart/form-data">
         Name: <input type="text" name="name" /><br />
         Type: <input type="text" name="type" /><br />
-        Stats: <input type="text" name="stats" /><br />
-        Image: <input type="file" id="image_input" name="image" /><br />
+        Stats: <input type="text" name="stats" /><br /><br />
+        Image: <input type="file" id="image_input" name="image" /><br /><br />
+        <div class= "newbutton">
         <input type="submit" value="Add Pokemon" />
+    </div>
     </form>
+</div>
 </body>
 </html>

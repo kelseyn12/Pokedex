@@ -71,6 +71,9 @@ th, td {
     max-width: 100%;
     
 }
+img {
+    width: 400px;
+}
 .name {
     display: flex;
     justify-content: center;
@@ -85,4 +88,43 @@ th, td {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newform {
+    display: flex;
+   justify-content: center;
+}
+.newbutton {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.editpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.editform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.editbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showpagepic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
