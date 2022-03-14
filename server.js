@@ -31,7 +31,7 @@ app.use(methodOverride('_method'));
         ROUTES
 ==============================*/
 app.get('/', (req, res) => {
-    res.send('hello world')
+    res.redirect('/pokemon/')
    });
 
 
