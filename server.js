@@ -30,6 +30,10 @@ app.use(methodOverride('_method'));
 /*============================
         ROUTES
 ==============================*/
+app.get('/', (req, res) => {
+    res.send('hello world')
+   });
+
 
 // INDEX//
 app.get('/pokemon/', (req, res) => {
