@@ -17,7 +17,7 @@ const upload = multer({dest: "./Public/images/"})
 const pokemon = require('./models/pokemon.js');
 const res = require("express/lib/response");
 const methodOverride = require('method-override');
-const port = 3000;
+const port = process.env.PORT || 3000;
 /*==============================
         Mount Middleware
 ================================*/
