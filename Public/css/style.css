@@ -37,6 +37,23 @@ header a {
     display: flex;
     justify-content: center;
 }
+.myBtn {
+    position:fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: lightcyan;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.myBtn:hover {
+    background-color: coral
+}
 ul {
     list-style-type: none;
 }
@@ -113,7 +130,10 @@ justify-content: center;
     align-items: center;
     justify-content: center;
 }
-.editbutton {
+.editimage {
+    margin-left: 250px;
+}
+.updatebutton {
     display: flex;
     align-items: center;
     justify-content: center;

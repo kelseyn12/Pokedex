@@ -12,10 +12,16 @@ Name: <input type="text" name="name" value="<%=pokemon.name %>" /><br />
 Type: <input type="text" name="type" value="<%=pokemon.type %>" /><br />
 Image: <input type="file" id="image_input" name="image" /><br /><br />
 </div>
-<div class= "editbutton">
+<div class= "editimage">
+<img src="<%= pokemon.img %>" alt="">
+</div>
+</div>
+<div class= "updatebutton">
 <input type="submit" value="Update Pokemon" />
 </div>
 
 </form>
 </body>
 </html>
+
+<%# image deletes when i "edit". Unsure how to fix. %>
