@@ -24,7 +24,7 @@ const port = process.env.PORT || 3000;
 app.use(express.urlencoded({extended: false}));
 
 
-app.use(express.static('public'));
+app.use(express.static('Public'));
 app.use(methodOverride('_method'));
 
 /*============================
