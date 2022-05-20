@@ -10,7 +10,7 @@
 <form action="/pokemon/<%=index %>?_method=PUT" method="POST">
 Name: <input type="text" name="name" value="<%=pokemon.name %>" /><br />
 Type: <input type="text" name="type" value="<%=pokemon.type %>" /><br />
-Image: <input type="file" id="image_input" name="image" /><br /><br />
+Image: <input type="file" id="image_input" name="image" value="<%=pokemon.img%>" /><br /><br />
 </div>
 <div class= "editimage">
 <img src="<%= pokemon.img %>" alt="">
